@@ -1,0 +1,26 @@
+$mainColor : #FFEBB7;
+
+$uglyred : #FF2F2F;
+
+$uglyorange : #FE663F;
+
+$uglybrown : #CD8F50 ;
+
+$uglygreen : #5EAB42;
+
+#mainBanner{
+    color: $mainColor;
+}
+
+@mixin maintitle {
+    font-family: 'Pretendard-Bold';
+    color : #FE663F;
+    font-size: 38px ;
+    font-weight: 700;
+}
+
+#maintitle {
+    h2 {
+        @include maintitle ;
+    }
+}

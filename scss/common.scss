@@ -13,15 +13,34 @@ $uglygreen : #5EAB42;
 }
 
 @mixin maintitle {
-    font-family: 'Pretendard-Bold';
-    color : black ;
-    font-size: 38px ;
+    font-family: 'Rubik', sans-serif;
+    color: #FE663F;
+    font-size: 38pt;
     font-weight: 700;
 }
 
-#maintitle {
-    h2 {
-        @include maintitle ;
-    }
+@mixin text {
+    font-family: 'Pretendard-Light';
+    color : black ;
+    font-size: 16pt ;
+    font-weight: 300;
 }
 
+@mixin strong {
+    font-family: "pretendard-SemiBold";
+    color: black;
+    font-size: 18pt;
+    font-weight: 600;
+  }
+
+h2 {
+    @include maintitle ;
+}
+
+strong{
+    @include strong ;
+}
+
+text {
+    @include text ;
+}
