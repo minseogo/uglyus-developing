@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <title>Swiper 8 Example</title>
+
+    <!-- 커스터 마이징 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/reviewswiper.min.css">
+
+    
+  
+</head>
+<body>
+    <section id="review_gms"> 
+        <span class="review_background"></span>
+
+        <div class="text-center dja_gms">
+            <h2 class = "font_con_title_e contents_spacing_gms">Review</h2>
+            <p class = "font_leadcopy contents_spacing_gms">구매자 분들의 진심을 담은 실제 후기 입니다.</p>
+        </div>
+
+  <!-- Swiper -->
+  <div class="container">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">   
+                <div>
+                    <img src="./img/naver.review.svg" alt="네이버 실시간 리뷰">
+                </div>              
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="./img/x.reivew.svg" alt="트위터 리뷰">
+                    </div> 
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="./img/instagram.review.svg" alt="인스타그램 리뷰">
+                    </div>   
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="./img/youtube.review.white.svg" alt="유튜브 리뷰">
+                    </div>
+                </div>   
+                <div class="swiper-slide">
+                    <div>
+                        <img src="./img/naver.bolg.review.svg" alt="네이버 블로그 리뷰">
+                    </div>    
+                </div>    
+            </div>       
+        </div>
+    </div>
+  
+    <div class="more_button-wrapper_gms dja_gms">
+        <button class="more_button_gms font_button">더보기</button>
+    </div>
+
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 슬라이드를 복제하여 개수 늘리기
+      const swiperWrapper = document.querySelector('.swiper-wrapper');
+      const slides = document.querySelectorAll('.swiper-slide');
+      slides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        swiperWrapper.appendChild(clone);
+      });
+      var swiper = new Swiper('.swiper', {
+        slidesPerView: 4,  // 화면에 보이는 슬라이드 수
+        spaceBetween: 0,  // 슬라이드 사이의 간격 (필요에 따라 조정)
+        loop: true,  
+        centeredSlides: true,      // 슬라이드가 무한히 반복되게 함
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },   
+      });   
+    });
+  </script>
+</body>
+</html>
