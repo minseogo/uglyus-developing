@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/reivewboxset.min.css">
+    <link rel="stylesheet" href="https://yunjuyean.github.io/uglyus/css/common.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+</head>
+<body>
+    <section id="review_gms"> 
+        <span class="review_background"></span>
+
+        <div class="text-center dja_gms">
+            <h2 class = "font_con_title_e contents_spacing_gms">Review</h2>
+            <p class = "font_leadcopy contents_spacing_gms">구매자 분들의 진심을 담은 실제 후기 입니다.</p>
+        </div>
+
+  <!-- Swiper -->
+  <div class="container">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide naver">   
+                <div class="reviewdiv review_text"> 
+                  <p class="bg_right">상세정보</p>
+                  <p class="bg_dark">리뷰</p>
+                  <p class="bg_right">Q&A</p>
+                  <p class="user_score">사용자 총 평점</p>
+                  <div class="border_divider"></div>
+                  <p class="rating">평점 비율</p>
+                  <div class="border_divider_horizontal"></div>
+                  <p class="reivewtitle">스토어 PICK</p>
+                  <p class="review_article">판매자가 직접 선정한 베스트 리뷰입니다.</p>
+                  <div class="reviewdiv_small_main"></div>
+                  <div class="reviewdiv_small_left"></div>
+                  <div class="reviewdiv_small_right"></div>
+                  <div class="icondiv_first"> 
+                     <img src="./icon/heart.svg" alt="">
+                  </div>
+                  <div class="icondiv_second">
+                    <img src="./icon/chat-dots.svg" alt="">
+                  </div>
+                  <div class="icondiv_third">
+                    <img src="./icon/gift.svg" alt="">
+                    <p class="gift_text">선물하기</p>
+                  </div>
+                  <div class="icondiv_forth">
+                    <img src="./icon/naver-square-svgrepo-com.svg" alt="">
+                    <p class="buy_text">구매하기</p>
+                  </div>
+
+              
+              
+                  <!-- <img src="./img/img_gms/naver.review.svg" alt="네이버 실시간 리뷰"> -->
+                </div>              
+            </div>
+            <!-- <div class="swiper-slide twiter">
+                <div class="reviewdiv"> -->
+                  
+                    <!-- <img src="./img/img_gms/x.reivew.svg" alt="트위터 리뷰"> -->
+                <!-- </div>          
+            </div>
+            <div class="swiper-slide instagram">
+                <div> -->
+                    <!-- <img src="./img/img_gms/instagram.review.svg" alt="인스타그램 리뷰"> -->
+                <!-- </div>    
+            </div>
+            <div class="swiper-slide youtube">
+                <div> -->
+                    <!-- <img src="./img/img_gms/youtube.review.white.svg" alt="유튜브 리뷰"> -->
+                <!-- </div>
+            </div>             
+            <div class="swiper-slide naverblog">
+                <div> -->
+                    <!-- <img src="./img/img_gms/naver.bolg.review.svg" alt="네이버 블로그 리뷰"> -->
+                <!-- </div>       
+            </div>
+          </div>       
+        </div>
+      </div>
+  </div> -->
+  <div class="more_button-wrapper_gms dja_gms">
+    <button class="more_button_gms font_button">더보기</button>
+  </div>
+
+
+  <!-- Swiper JS -->
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      const swiperWrapper = document.querySelector('.swiper-wrapper');
+      const slides = document.querySelectorAll('.swiper-slide');
+      slides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        swiperWrapper.appendChild(clone);
+      });
+
+      var swiper = new Swiper('.swiper', {
+        slidesPerView: 4,  // 화면에 보이는 슬라이드 수
+        spaceBetween: 0,  // 슬라이드 사이의 간격 (필요에 따라 조정)
+        loop: true,  
+        centeredSlides: true,      // 슬라이드가 무한히 반복되게 함
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        
+      });
+      
+    });
+  </script> -->
+
+<script
+src="https://code.jquery.com/jquery-2.2.4.min.js"
+integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+crossorigin="anonymous">
+</script>
+
+<script>
+  $(document).ready(function(){
+      $.ajax({
+          url: "/data/data_gms.json", // JSON 파일의 경로
+          type: "GET",
+          dataType: "json",
+          success: function(data){
+              console.log("리뷰정보", data);
+
+              let snsListHTML = '';
+
+              $('.swpier-slide .naver').html(snsListHTML);
+              $('.swpier-slide .twiter').html(snsListHTML);
+              $('.swpier-slide .instagram').html(snsListHTML);
+              $('.swpier-slide .youtube').html(snsListHTML);
+              $('.swpier-slide .naverblog').html(snsListHTML);
+
+          },
+          error: function(){
+              
+          }
+      });
+  });
+</script>
+</body>
+</html>
