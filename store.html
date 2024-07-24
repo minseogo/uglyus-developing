@@ -144,33 +144,26 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 
-    // const swiperWrapper = document.querySelector('.swiper-wrapper');
-    // const slides = document.querySelectorAll('.swiper-slide');
-    // slides.forEach(slide => {
-    // const clone = slide.cloneNode(true);
-    // swiperWrapper.appendChild(clone);
-    // });
-
     var swiper = new Swiper('.swiper', {
-    slidesPerView: 3,  // 화면에 보이는 슬라이드 수
-    spaceBetween: 100,  // 슬라이드 사이의 간격 (필요에 따라 조정)
+    slidesPerView: 3, 
+    spaceBetween: 100,  
     loop: true,  
-    centeredSlides: true,      // 슬라이드가 무한히 반복되게 함
+    centeredSlides: true, 
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    // autoplay: {
-    //delay: 2500,
-    // disableOnInteraction: false,
-// }, 
+    autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+}, 
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
 
     });
-    swiper.slideTo(1, 0, false); // 초기 상태에서 배경 이미지가 보이도록 설정
+    swiper.slideTo(1, 0, false); 
 });
 </script>
 
