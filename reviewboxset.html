@@ -130,39 +130,41 @@
               <div class="swiper-slide twitter d-flex justify-content-center align-items-center text-center">
                 <div class="reviewbox review_text bg-white">
                   
-                  <section>
-                    <span class="twitter_profile fw-lighter rounded-circle d-flex justify-content-center align-items-center text-white f_13">민서</span>
-                    <img class="twitter_logo position-absolute" src="./icon/free-icon-twitter-5968958.png" alt="">
-                    <i class="bi bi-gear twitter_setting position-absolute"></i>
+                  <section class="d-flex justify-content-between align-items-center px-2 pt-2">
+                    <span class="twitter_profile fw-lighter rounded-circle d-flex justify-content-center align-items-center text-white f_13  mt-0 ms-0">민서</span>
+                    <img class="twitter_logo" src="./icon/free-icon-twitter-5968958.png" alt="">
+                    <i class="bi bi-gear twitter_setting "></i>
                   </section>
 
                   <section class="twitter_top_text d-flex">
                     <p class="col-6">For you</p>
                     <p class="col-6">following</p>
                   </section>
-                  <section>
-                    <hr class="twitter_border_divider_horizontal position-relative divider_color"></hr>
-                  </section>
-                  <section>
-                    <img class="twitter_review_profile position-absolute" src="./img/twitter_reivew_profilephoto.png" alt="">
-                    <span class="position-relative d-flex twitter_reviewbox_user_info">
-                      <p class="twitter_reviewbox_user_id position-absolute f_11">민서1112</p>
-                      <p class="twitter_reviewbox_user_nikname f_11">@minseo</p>
-                    </span>
-                    <span class="twitter_reviewbox_reivew_text position-absolute f_11">
-                      <p>어글리어스와 함께 요리하는 지수 보고 가세요 ~</p>
-                    </span>             
+                  <hr class="twitter_border_divider_horizontal position-relative divider_color" />
+                  
+                  <section class="d-flex align-items-center twitter_reviewbox_user_info ms-2">
+                    <img class="twitter_review_profile" src="./img/twitter_reivew_profilephoto.png" alt="">
+                    <div class="ms-2">
+                        <div class=" d-flex">
+                          <span class="twitter_reviewbox_user_id  f_11">민서1112</span>
+                          <span class="twitter_reviewbox_user_nikname f_11 mx-0 ms-2">@minseo</span>
+                        </div>
+                        <div class="twitter_reviewbox_reivew_text  f_11">
+                          <span>어글리어스와 함께 요리하는 지수 보고 가세요 ~</span>
+                        </div>  
+                    </div>
+                              
                   </section>
 
                   <section>
                         <img class="twitter_rieveiwbox_reviewphoto rounded " src="./img/twitter_reviewbox_photo.jpg" alt="">
                   </section>
 
-                  <section>
+               
                     <hr class="twitter_border_divider_horizontal position-relative divider_color"></hr>
-                  </section>
+             
 
-                  <section class="twitter_bottomicon position-absolute">
+                  <section class="twitter_bottomicon">
                     <i class="bi bi-house-door-fill"></i>
                     <i class="bi bi-search"></i>
                     <img class="twitter_followingicon" src="./icon/following.png" alt="">
@@ -176,13 +178,18 @@
 
               <div class="swiper-slide instagram d-flex justify-content-center align-items-center text-center">
                 <div class="reviewbox review_text bg-white fw-500">
-                  <section>
-                    <img class="insta_profilephoto position-absolute" src="./img/insta_riview_profilephoto.png" alt="">
-                    <span class="position-relative d-flex insta_reviewbox_user_info">
-                      <p class="insta_reviewbox_user_id position-absolute">jennierubyjane</p>
-                      <p class="insta_reviewbox_user_country position-absolute">Korea</p>
-                      <i class="bi bi-three-dots-vertical position-absolute"></i>
-                    </span>
+                  <section class="insta_reviewbox_user_info d-flex align-items-center">
+                    <img class="insta_profilephoto" src="./img/insta_riview_profilephoto.png" alt="">
+                    <div class="ms-2">
+                      <div class="flex">
+                        <p class="insta_reviewbox_user_id">jennierubyjane</p>
+                      </div>
+                        <div>
+                          <p class="insta_reviewbox_user_country">Korea</p>
+                        </div>
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+                    
                   </section>
 
                   <section>
@@ -313,7 +320,7 @@
        swiperWrapper.appendChild(clone);
      });
 
-     var swiper = new Swiper('.swiper', {
+     const swiper = new Swiper('.swiper', {
        slidesPerView: 4,  // 화면에 보이는 슬라이드 수
        spaceBetween: 0,  // 슬라이드 사이의 간격 (필요에 따라 조정)
        loop: true,  
@@ -330,7 +337,20 @@
          el: '.swiper-pagination',
          clickable: true,
        },
-       
+       breakpoints: {
+        1440: {
+          slidesPerView: 4,
+          spaceBetween: 0,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 0,
+        },
+        576: {
+          slidesPerView: 1.5,
+          spaceBetween: 0,
+        }
+      }
      });
      
    });
