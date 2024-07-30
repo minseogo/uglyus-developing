@@ -121,13 +121,13 @@
 }
 .swiper-slide.swiper-slide-active.cucumber .imglayout::before {
   left: -68px;
-  top: -97px;
+  top: -80px;
   width: 110%;
   height: 110%;
   background-image: url(../img/store/cucumber.svg);
 }
 .swiper-slide.swiper-slide-active.cucumber .info {
-  margin-bottom: 7rem;
+  margin-bottom: 2rem;
   margin-left: 3rem;
 }
 .swiper-slide.swiper-slide-active .carrot_png {
@@ -168,7 +168,7 @@
 }
 .swiper-slide.swiper-slide-active.lemon .info {
   margin-top: 2rem;
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 
 .store_btn {
@@ -230,7 +230,7 @@
     background-image: url(../img/store/cucumber.svg);
   }
   .swiper-slide.swiper-slide-active.cucumber .info {
-    margin-left: 69px;
+    margin-left: 33px;
     margin-top: -62px;
   }
   .swiper-slide.swiper-slide-active .carrot_png {
@@ -259,7 +259,7 @@
   }
   .swiper-slide.swiper-slide-active.mushroom .info {
     margin-top: 129px !important;
-    margin-left: 4rem !important;
+    margin-left: 5rem !important;
   }
   .swiper-slide.swiper-slide-active .bok_choy_png {
     top: 8px;
