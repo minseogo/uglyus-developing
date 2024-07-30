@@ -247,11 +247,11 @@
   }
   .swiper-slide.swiper-slide-active .mushroom_png {
     top: 65px;
-    left: -2rem;
+    left: 1rem;
     transform: scale(1.2);
   }
   .swiper-slide.swiper-slide-active.mushroom .imglayout::before {
-    left: -112px;
+    left: -62px;
     top: -30px;
     width: 110%;
     height: 150%;
