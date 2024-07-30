@@ -20,11 +20,11 @@
     <div id="store_jjh" class="overflow-hidden">
         <div class="container-fluid text-center">
             <h2 class="font_con_title_k mb-4">개성있지만 싱싱해요</h2>
-            <div class="d-none d-lg-flex justify-content-center mb-5 ">
+            <div class="d-none d-lg-flex justify-content-center">
                 <p class="font_leadcopy me-5">#친환경농법을 우선한 건강한 채소 </p>
                 <p class="font_leadcopy me-5">#지금 먹어야 할 제철 농산물</p>
                 <p class="font_leadcopy me-5">#우리의 일상을 알록달록하게 </p>
-                <p class="font_leadcopy ">#맛있게! 신선하게! 부담없게!</p>
+                <p class="font_leadcopy">#맛있게! 신선하게! 부담없게!</p>
             </div>
         </div>
     
@@ -33,7 +33,7 @@
         <div class="d-flex justify-content-center">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide paprika d-flex justify-content-between align-items-center ">
+                    <div class="swiper-slide paprika d-flex justify-content-between align-items-center">
                         <div class="col-6 ">
                             <div class="imglayout">
                                 <img class="paprika_png png scaled-image img-fluid " src="./img/store/paprika.png" alt="">
@@ -51,8 +51,8 @@
                         </div>
                     </div>
 
-                    <div  class="swiper-slide lemon d-flex justify-content-between align-items-center ">
-                        <div class="col-6">
+                    <div  class="swiper-slide lemon d-flex justify-content-between align-items-center">
+                        <div class="col-6 img_lg_p">
                             <div class="imglayout">
                                 <img class="lemon_png png scaled-image img-fluid " src="./img/store/lemon.png" alt="">
                             </div>
@@ -70,7 +70,7 @@
                     </div>
 
                     <div class="swiper-slide cucumber d-flex justify-content-between align-items-center ">
-                        <div class="col-6 ">
+                        <div class="col-6 img_lg_p ">
                             <div class="imglayout">
                                 <img class="cucumber_png png scaled-image img-fluid " src="./img/store/cucumber.png" alt="">
                             </div>
@@ -89,7 +89,7 @@
                     </div>
 
                     <div class="swiper-slide carrot d-flex justify-content-between align-items-center ">
-                        <div class="col-6 ">
+                        <div class="col-6 img_lg_p">
                             <div class="imglayout"> 
                                 <img class="carrot_png png scaled-image img-fluid " src="./img/store/carrot.png" alt="">
                             </div>
@@ -108,7 +108,7 @@
                     </div>
 
                     <div class="swiper-slide mushroom d-flex justify-content-between align-items-center ">
-                        <div class="col-6">
+                        <div class="col-6 img_lg_p">
                             <div class="imglayout">                         
                                 <img class="mushroom_png png scaled-image img-fluid " src="./img/store/Mushroom.png" alt=""> 
                             </div>
@@ -127,7 +127,7 @@
                     </div> 
                 
                     <div class="swiper-slide bok_choy d-flex justify-content-between align-items-center ">
-                        <div class="col-6 ">
+                        <div class="col-6 img_lg_p">
                             <div class="imglayout">
                                 <img class="bok_choy_png png scaled-image img-fluid " src="./img/store/bok_choy.png" alt="">
                             </div>
@@ -146,8 +146,8 @@
                     </div>          
                 </div>
             </div>
-        <div class="position-absolute pagination_custom">
-            <div class="swiper-pagination position-relative"></div>
+        <div class="pagination_custom d-flex flex-column align-items-center justify-content-end vh-100">
+            <div class="swiper-pagination mt-auto"></div>
         </div>
     </div>
 </div>
@@ -157,7 +157,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 
-    var swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('#store_jjh .swiper', {
     slidesPerView: 'auto', 
     spaceBetween: 0,  
     loop: true,  
@@ -167,28 +167,28 @@ document.addEventListener('DOMContentLoaded', function () {
         prevEl: '.swiper-button-prev',
     },
 //     autoplay: {
-//     delay: 2500,
-//     disableOnInteraction: false,
-// }, 
+//      delay: 2500,
+//      disableOnInteraction: false,
+//  }, 
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
-    // breakpoints: {
+    breakpoints: {
        
-    //     768: {
-    //       slidesPerView: 1.5,
-    //       spaceBetween: 0,
-    //     },
-    //     1024: {
-    //       slidesPerView: 2,
-    //       spaceBetween: 0,
-    //     },
-    //     1440: {
-    //       slidesPerView: 3,
-    //       spaceBetween: 0,
-    //     },
-    //   },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        1024: {
+          slidesPerView: 1.7,
+          spaceBetween: 0,
+        },
+        1440: {
+          slidesPerView: 'auto',
+          spaceBetween: 0,
+        },
+      },
 
     });
     swiper.slideTo(1, 0, false); 

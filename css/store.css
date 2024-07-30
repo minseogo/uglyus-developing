@@ -37,6 +37,7 @@
 
 .swiper {
   margin: 0;
+  margin-top: -15rem;
   width: 100%;
 }
 
@@ -46,13 +47,8 @@
   align-items: center;
 }
 
-.pagination_custom {
-  bottom: 18rem;
-}
-
 .swiper-slide {
   width: 500px;
-  padding-bottom: 42px;
 }
 .swiper-slide .bg,
 .swiper-slide .info {
@@ -67,7 +63,6 @@
   transform-origin: center;
 }
 .swiper-slide.swiper-slide-active {
-  padding-top: 5rem;
   z-index: 10000;
   width: 700px;
 }
@@ -186,7 +181,7 @@
   margin-top: 3rem;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1024px) {
   .font_title_kk {
     font-size: 40px;
   }
@@ -202,10 +197,11 @@
     justify-content: center;
     align-items: center;
   }
+  .swiper-slide-active .img_lg_p {
+    padding-top: 6rem;
+  }
   .swiper-slide-active .imglayout {
     transform: scale(0.7);
-    margin-top: -3rem;
-    left: 2rem;
   }
   .swiper-slide-active .media {
     text-align: center;
@@ -217,6 +213,9 @@
   .swiper-slide.swiper-slide-active.bok_choy .info {
     margin-left: 0;
     margin-top: 0;
+  }
+  .swiper-slide.swiper-slide-active {
+    justify-content: center !important;
   }
   .swiper-slide.swiper-slide-active .cucumber_png {
     top: -95px;
