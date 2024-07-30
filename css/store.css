@@ -235,11 +235,11 @@
   }
   .swiper-slide.swiper-slide-active .carrot_png {
     top: -26px;
-    left: -3rem;
+    left: 4rem;
     transform: scale(1.2);
   }
   .swiper-slide.swiper-slide-active.carrot .imglayout::before {
-    left: -124px;
+    left: -28px;
     top: -88px;
     width: 130%;
     height: 130%;
@@ -263,12 +263,12 @@
   }
   .swiper-slide.swiper-slide-active .bok_choy_png {
     top: 8px;
-    left: -2rem;
+    left: -1rem;
     transform: scale(1.2);
   }
   .swiper-slide.swiper-slide-active.bok_choy .imglayout::before {
     top: -3rem;
-    left: -4rem;
+    left: -3rem;
     width: 140%;
     height: 145%;
     background-image: url(../img/store/bok_choy.svg);
@@ -277,7 +277,7 @@
     margin-left: 69px;
     margin-top: 74px;
   }
-  .pagination_custom {
+  .swiper-pagination {
     display: none;
   }
 }
