@@ -53,7 +53,7 @@
         }
         img {
         max-height: 100%;
-        transition: transform 0.3s ease; /* 이미지 크기 변화에 대한 부드러운 전환을 추가합니다. */
+        transition: transform 0.3s ease;
         object-fit: cover;
         transform: scale(0.5);
         transform-origin: center;
@@ -171,7 +171,7 @@
                 }
             }
             .info{
-                margin-left: 5rem;
+                margin-left: 4rem;
                 margin-top: 2rem;
             }
         }
